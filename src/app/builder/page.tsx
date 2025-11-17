@@ -1,3 +1,4 @@
+"use client";
 export default function BuilderPage() {
     return (
         <div className="p-6">

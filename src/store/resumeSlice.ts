@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface PersonalInfo {
     fullName: string;
-    tittle: string;
+    title: string;
     email: string;
     phone: string;
     location: string;
@@ -16,7 +16,7 @@ export interface ResumeState {
 const initialState: ResumeState = {
     personal: {
         fullName: '',
-        tittle: '',
+        title: '',
         email: '',
         phone: '',
         location: '',
