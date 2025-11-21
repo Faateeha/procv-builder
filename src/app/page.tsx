@@ -12,7 +12,7 @@ export default function HomePage() {
         <p className="text-muted-foreground mb-8 text-lg"> AI-assisted resume builder with clean templates, live preview, and instant PDF export.</p>
 
         
-          <Link  href="/builder">
+          <Link  href="/editor">
             <Button size="lg" variant="default">Start Building</Button>
           </Link>
             
@@ -59,7 +59,7 @@ export default function HomePage() {
       {/*CTA Section */}
       <section className="mt-20 text-center">
         <p className="text-lg mb-4">Ready to create your resume? Start now and make a professional impression!</p>
-        <Link href="/builder">
+        <Link href="/editor">
           <Button size="lg" variant="default">Start Building</Button>
         </Link>
       </section>

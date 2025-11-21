@@ -6,6 +6,7 @@ import ExperienceForm from "@/components/forms/ExperienceForm";
 import EducationForm from "@/components/forms/EducationForm";
 import ProjectForm from "@/components/forms/ProjectForm";
 import ResumePreview from "@/components/preview/ResumePreview";
+import TemplateSelector from "@/components/templates/TemplateSelector";
 
 
 export default function EditorPage() {
@@ -14,6 +15,7 @@ export default function EditorPage() {
         <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/*left*/}
       <div className="space-y-8">
+        <TemplateSelector/>
         <h1 className="text-2xl font-bold mb-4">Personal Information</h1>
         <PersonalForm />
         <h1 className="text-2xl font-bold">Skills</h1>
