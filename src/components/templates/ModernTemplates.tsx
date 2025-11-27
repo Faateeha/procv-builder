@@ -14,11 +14,15 @@ export default function MinimalTemplate({ resume }: MinimalTemplateProps) {
       {/* NAME + TITLE */}
       <div>
         <h1 className="text-3xl font-bold">{personal.fullName}</h1>
-        <p className="text-lg text-gray-600">{personal.title}</p>
+
+        {/* HEX instead of text-gray-600 */}
+        <p className="text-lg" style={{ color: "#666666" }}>
+          {personal.title}
+        </p>
       </div>
 
       {/* CONTACT */}
-      <div className="text-sm text-gray-700 space-y-1">
+      <div className="text-sm space-y-1" style={{ color: "#555555" }}>
         <p>{personal.email}</p>
         <p>{personal.phone}</p>
         <p>{personal.location}</p>
@@ -27,17 +31,24 @@ export default function MinimalTemplate({ resume }: MinimalTemplateProps) {
       {/* SUMMARY */}
       <div>
         <h2 className="text-xl font-semibold">Summary</h2>
-        <p className="text-gray-700">{personal.summary}</p>
+
+        {/* HEX instead of text-gray-700 */}
+        <p style={{ color: "#555555" }}>{personal.summary}</p>
       </div>
 
       {/* SKILLS */}
       <div>
         <h2 className="text-xl font-semibold">Skills</h2>
+
         <ul className="flex flex-wrap gap-2">
           {skills.map((s, i) => (
             <li
               key={i}
-              className="px-3 py-1 bg-gray-200 rounded text-sm"
+              className="px-3 py-1 rounded text-sm"
+              style={{
+                backgroundColor: "#E5E7EB", // gray-200 equivalent
+                color: "#000000",
+              }}
             >
               {s.name}
             </li>
@@ -51,9 +62,17 @@ export default function MinimalTemplate({ resume }: MinimalTemplateProps) {
         <div className="space-y-4">
           {experience.map((exp, i) => (
             <div key={i}>
-              <p className="font-medium">{exp.role} — {exp.company}</p>
-              <p className="text-sm text-gray-600">{exp.duration}</p>
-              <p className="text-gray-700">{exp.description}</p>
+              <p className="font-medium">
+                {exp.role} — {exp.company}
+              </p>
+
+              {/* HEX instead of text-gray-600 */}
+              <p className="text-sm" style={{ color: "#666666" }}>
+                {exp.duration}
+              </p>
+
+              {/* HEX instead of text-gray-700 */}
+              <p style={{ color: "#555555" }}>{exp.description}</p>
             </div>
           ))}
         </div>
@@ -67,7 +86,11 @@ export default function MinimalTemplate({ resume }: MinimalTemplateProps) {
             <div key={i}>
               <p className="font-medium">{edu.degree}</p>
               <p className="text-sm">{edu.institution}</p>
-              <p className="text-sm text-gray-600">{edu.duration}</p>
+
+              {/* HEX instead of text-gray-600 */}
+              <p className="text-sm" style={{ color: "#666666" }}>
+                {edu.duration}
+              </p>
             </div>
           ))}
         </div>
@@ -80,11 +103,15 @@ export default function MinimalTemplate({ resume }: MinimalTemplateProps) {
           {projects.map((proj, i) => (
             <div key={i}>
               <p className="font-medium">{proj.title}</p>
-              <p className="text-gray-700">{proj.description}</p>
+
+              {/* HEX */}
+              <p style={{ color: "#555555" }}>{proj.description}</p>
+
               {proj.link && (
                 <a
                   href={proj.link}
-                  className="text-blue-600 underline text-sm"
+                  className="underline text-sm"
+                  style={{ color: "#2563EB" }}
                 >
                   {proj.link}
                 </a>

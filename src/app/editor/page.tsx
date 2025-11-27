@@ -7,6 +7,7 @@ import EducationForm from "@/components/forms/EducationForm";
 import ProjectForm from "@/components/forms/ProjectForm";
 import ResumePreview from "@/components/preview/ResumePreview";
 import TemplateSelector from "@/components/templates/TemplateSelector";
+import DownloadPDF from "@/components/DonloadPdf"
 
 
 export default function EditorPage() {
@@ -33,7 +34,7 @@ export default function EditorPage() {
 
       {/*right*/}
       <div className="bg-neutral-100 dark:bg-neutral-900 rounded-xl p-6">
-        <h2 className="text-xl font-medium">Live preview</h2>
+        <DownloadPDF />
         <ResumePreview />
       </div>
     </div>
